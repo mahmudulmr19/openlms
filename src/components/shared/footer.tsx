@@ -1,17 +1,17 @@
 import { Container, Logo, Button } from "@/components/ui";
 import { Facebook, Youtube } from "lucide-react";
-import { config } from "@/lib/config";
+import { siteConfig } from "@/lib/config";
 import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-gray-200 bg-white/50 py-8 backdrop-blur-lg">
+    <footer className="border-t border-zinc-200 bg-white/50 py-8 backdrop-blur-lg">
       <Container className="pt-8">
         <div className="lg:grid lg:grid-cols-5 lg:gap-8">
           <div className="space-y-6 lg:col-span-2">
             <Logo />
-            <p className="max-w-xs text-sm text-gray-500">
-              {config.footerText}
+            <p className="max-w-xs text-sm text-zinc-500">
+              {siteConfig.footerText}
             </p>
             <div className="flex items-center space-x-2">
               <Button
@@ -20,13 +20,13 @@ export function Footer() {
                 className="rounded-md"
                 asChild
               >
-                <Link href={config.social.youtube} target="_blank">
-                  <Youtube className="size-5 text-gray-600" />
+                <Link href={siteConfig.social.youtube} target="_blank">
+                  <Youtube className="size-5 text-zinc-600" />
                   <span className="sr-only">Youtube</span>
                 </Link>
               </Button>
 
-              <div className="h-8 border-l border-gray-200" />
+              <div className="h-8 border-l border-zinc-200" />
 
               <Button
                 variant="ghost"
@@ -34,8 +34,8 @@ export function Footer() {
                 className="rounded-md"
                 asChild
               >
-                <Link href={config.social.facebook} target="_blank">
-                  <Facebook className="size-5 text-gray-600" />
+                <Link href={siteConfig.social.facebook} target="_blank">
+                  <Facebook className="size-5 text-zinc-600" />
                   <span className="sr-only">Facebook</span>
                 </Link>
               </Button>
@@ -43,13 +43,13 @@ export function Footer() {
           </div>
           <div className="mt-6 grid grid-cols-2 gap-8 lg:col-span-3 lg:mt-0">
             <div className="mt-10 lg:mt-0">
-              <h3 className="text-sm font-semibold text-gray-600">
+              <h3 className="text-sm font-semibold text-zinc-600">
                 Quick Links
               </h3>
               <ul role="list" className="mt-4 space-y-4">
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/forum"
                   >
                     Support Forum
@@ -57,7 +57,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/my-courses"
                   >
                     My Courses
@@ -66,7 +66,7 @@ export function Footer() {
 
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/courses"
                   >
                     Courses
@@ -74,7 +74,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/blog"
                   >
                     Blog
@@ -84,11 +84,11 @@ export function Footer() {
             </div>
 
             <div className="mt-10 lg:mt-0">
-              <h3 className="text-sm font-semibold text-gray-600">Company</h3>
+              <h3 className="text-sm font-semibold text-zinc-600">Company</h3>
               <ul role="list" className="mt-4 space-y-4">
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/about"
                   >
                     About
@@ -96,7 +96,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/legal/privacy"
                   >
                     Privacy
@@ -104,7 +104,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/legal/terms"
                   >
                     Terms
@@ -112,7 +112,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
+                    className="text-sm text-zinc-500 hover:text-zinc-900"
                     href="/legal/refund"
                   >
                     Refund Policy
@@ -123,10 +123,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-10 lg:mt-16">
-          <p className="text-sm leading-5 text-gray-500">
-            Copyright © {new Date().getFullYear()} {config.siteName}. All rights
-            reserved.
+        <div className="mt-16 border-t border-zinc-900/10 pt-8 sm:mt-10 lg:mt-16">
+          <p className="text-sm leading-5 text-zinc-500">
+            Copyright © {new Date().getFullYear()} {siteConfig.siteName}. All
+            rights reserved.
           </p>
         </div>
       </Container>

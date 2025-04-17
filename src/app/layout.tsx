@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 
 const fontSans = Outfit({
@@ -18,8 +19,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={cn(fontSans.className, "antialiased")}>{children}</body>
-    </html>
+    <ClerkProvider
+      appearance={{
+        variables: {
+          colorPrimary: "#2f72df",
+        },
+      }}
+    >
+      <html lang="en">
+        <body className={cn(fontSans.className, "antialiased")}>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

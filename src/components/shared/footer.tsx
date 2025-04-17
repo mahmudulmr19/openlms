@@ -1,6 +1,6 @@
 import { Container, Logo, Button } from "@/components/ui";
-import { config } from "@/lib/config";
 import { Facebook, Youtube } from "lucide-react";
+import { config } from "@/lib/config";
 import Link from "next/link";
 
 export function Footer() {
@@ -41,7 +41,7 @@ export function Footer() {
               </Button>
             </div>
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-8 lg:col-span-3 lg:mt-0 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-8 lg:col-span-3 lg:mt-0">
             <div className="mt-10 lg:mt-0">
               <h3 className="text-sm font-semibold text-gray-600">
                 Quick Links
@@ -116,30 +116,6 @@ export function Footer() {
                     href="/legal/refund"
                   >
                     Refund Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="mt-10 lg:mt-0">
-              <h3 className="text-sm font-semibold text-gray-600">Community</h3>
-              <ul role="list" className="mt-4 space-y-4">
-                <li>
-                  <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
-                    href={config.social.facebook}
-                    target="_blank"
-                  >
-                    Facebook
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    className="text-sm text-gray-500 hover:text-gray-900"
-                    href={config.social.youtube}
-                    target="_blank"
-                  >
-                    Youtube
                   </Link>
                 </li>
               </ul>

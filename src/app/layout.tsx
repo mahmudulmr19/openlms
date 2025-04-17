@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
+import { config } from "@/lib/config";
 import { cn } from "@/lib/utils";
 import "./globals.css";
 
-const outfit = Outfit({
+const fontSans = Outfit({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "OpenLMS",
-  description: "OpenLMS is a free and open-source learning management system.",
+  title: config.siteName,
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(outfit.className, "antialiased")}>{children}</body>
+      <body className={cn(fontSans.className, "antialiased")}>{children}</body>
     </html>
   );
 }

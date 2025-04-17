@@ -1,3 +1,4 @@
 {
-  "tailwindCSS.classFunctions": ["cva", "cx"]
+  "tailwindCSS.classFunctions": ["cva", "cx"],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

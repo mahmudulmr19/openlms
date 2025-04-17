@@ -1,4 +1,6 @@
 import { Container, Logo, Button } from "@/components/ui";
+import { UserButton } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 
 const navlinks = [
@@ -8,7 +10,8 @@ const navlinks = [
   { label: "My Classes", href: "/dashboard" },
 ];
 
-export function Navbar() {
+export async function Navbar() {
+  const { userId } = await auth();
   return (
     <div className="sticky inset-x-0 top-0 z-30 w-full border-b border-zinc-200 bg-white/75 backdrop-blur-lg transition-all">
       <Container>
@@ -23,7 +26,15 @@ export function Navbar() {
             ))}
           </div>
 
-          <Button>Login</Button>
+          <div>
+            {userId ? (
+              <UserButton />
+            ) : (
+              <Button asChild>
+                <Link href="/sign-in">Login</Link>
+              </Button>
+            )}
+          </div>
         </div>
       </Container>
     </div>

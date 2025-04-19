@@ -3,11 +3,11 @@ import { UserButton } from "@clerk/nextjs";
 import { auth } from "@clerk/nextjs/server";
 import Link from "next/link";
 
-const navlinks = [
+const navLinks = [
   { label: "Courses", href: "/courses" },
   { label: "Blog", href: "/blog" },
-  { label: "Support Forum", href: "/forum" },
-  { label: "My Classes", href: "/dashboard" },
+  { label: "Forums", href: "/forum" },
+  { label: "My Courses", href: "/dashboard" },
 ];
 
 export async function Navbar() {
@@ -19,7 +19,7 @@ export async function Navbar() {
           <Logo />
 
           <div className="hidden items-center space-x-4 md:flex">
-            {navlinks.map((link) => (
+            {navLinks.map((link) => (
               <Button key={link.href} variant="ghost" asChild>
                 <Link href={link.href}>{link.label}</Link>
               </Button>
